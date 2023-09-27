@@ -1,0 +1,18 @@
+<html>
+	<head>
+	<link th:href="@{/CSS/deleteStudent.css}" rel="stylesheet" />	
+	</head>
+<body>
+	<h1>delete Student </h1>
+	<a href="/student/index">Home</a> <br> <br>
+	
+	<div>
+		<form action="/student/delete" method="get">
+			Enter Rollnumber:<input type="text" name="rollNumber" autocomplete="off">
+			Enter Email:<input type="email" name="email" autocomplete="off">
+			Enter password:<input type="password" name="password" autocomplete="off">
+			<button>submit</button>
+		</form>
+	</div>
+</body>	
+	

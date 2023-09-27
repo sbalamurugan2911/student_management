@@ -1,0 +1,21 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<link th:href="@{/CSS/updateStudent.css}" rel="stylesheet" />	
+	</head>
+<body>
+	<h1>Update Student </h1>
+	<a href="/student/index">Home</a> <br> <br>
+	
+	<div>
+		<form th:action="@{/student/update}" th:object="${student}" method="post">
+			Rollnumber:<input type="text" th:field="*{rollNumber}" readonly>
+			Enter Name:<input type="text"  th:field="*{name}">
+			Enter Standard:<input type="text"  th:field="*{standard}">
+			Enter Age:<input type="text"  th:field="*{age}">
+			Enter Email:<input type="email" th:field="*{email}">
+			Enter password:<input type="password"  th:field="*{password}">
+			<button>submit</button>
+		</form>
+	</div>
+</body>	
+	

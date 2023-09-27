@@ -1,0 +1,25 @@
+h1{
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	padding: 10px;
+	background-color: #00A8E1;
+}
+.nav{
+	
+	font-family: Arial, Helvetica, sans-serif;
+	height: 30px;
+	
+}
+a{
+	
+	color:#00A8E1;
+	padding: 10px;
+	
+}
+.m{
+	color: #00A8E1;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	margin: 100px auto;
+}

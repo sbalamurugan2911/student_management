@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<link th:href="@{/CSS/deleteMassage.css}" rel="stylesheet" />	
+	</head>
+<body>
+	<h1>Student Management</h1>
+	<a href="/student/index">Home</a>
+	<a href="/student/addStudent">Add student</a>
+	<a href="/student/RollNumberToUpdate">Edit/update</a>
+	<a href="/student/deleteStudent">Delete</a>
+	<br> <br> <br> <br>
+
+	<div class="m">
+		<a th:text="${result}"></a>
+	</div>
+	
+</body>	
+	
+	
+</html>
