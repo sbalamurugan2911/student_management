@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.student.dao.StudentRepository;
 import com.student.entity.Student;
+
 @Service
 public class StudentServiceImp implements StudentService{
 	 @Autowired
@@ -24,7 +25,11 @@ public class StudentServiceImp implements StudentService{
 
 	@Override
 	public String add(Student student) {
+		
 		Integer id=student.getRollNumber();
+		
+		
+		
 		Optional<Student> op=studentRep.findById(id);
 		
 		if (op.isEmpty()) {
@@ -36,6 +41,7 @@ public class StudentServiceImp implements StudentService{
 		else {
 			return "student added failed!  The roll number already exist.";
 		}
+		
 		
 		
 	}

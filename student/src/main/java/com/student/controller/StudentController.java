@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +16,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.student.entity.Student;
 import com.student.service.StudentService;
 import com.student.service.StudentServiceImp;
+
+import ch.qos.logback.core.model.Model;
 
 @Controller
 @RequestMapping("/student")
@@ -83,6 +87,11 @@ public class StudentController {
 		mv.addObject("result", result);
 		return mv;
 	}
+	@ExceptionHandler(value=Exception.class)
+	public ModelAndView notValidException() {
+		ModelAndView mv = new ModelAndView("invalid");
+		return mv;
+		}
 	//@GetMapping("studentDetails")
 	
 
